@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>WOWSlider</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="WOWSlider" />
+	<meta name="description" content="WOWSlider" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+
+
+
+
+	<!-- End WOWSlider.com HEAD section -->
+</head>
+<body>
+
+	<!-- Start WOWSlider.com BODY section -->
+
+	<div class="flexslider"  id="slideContainer">
+		
+	  </div>
+	
+	<!-- End WOWSlider.com BODY section -->
+	
+	<script>
+		var str = '<ul class="slides">'
+			for(let i = 1; i <= 101; i++) {
+				img = './images/'+i+'.jpg'
+				str += '<li><img src=' + img + ' alt="" title="" id="wows_1"/></li>';
+		}
+
+		str += '</ul>';
+		document.getElementById("slideContainer").innerHTML = str;
+		
+
+		$('.flexslider').flexslider({
+			animation: "slide",
+			animationLoop: true,
+			itemWidth: 600,
+			itemMargin: 5,
+			minItems: 1,
+			maxItems: 1
+		});
+		
+	</script>
+	</body>
+</html>
